@@ -1,181 +1,119 @@
-/* RESET & BASE STYLES */
+/* Reset & Base Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
     background-color: #000000;
     color: #ffffff;
-    min-height: 100vh;
-    overflow-x: hidden; /* Prevents side scrolling */
+    overflow-x: hidden;
 }
 
-/* TRUE FULL-SCREEN BACKGROUND IMAGE */
-.bg-image {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
+/* Hero Section with Cat 6.jpg Background */
+.hero-container {
     height: 100vh;
-    object-fit: cover;
-    object-position: right center; /* Keeps the grumpy cat locked on the right side */
-    z-index: -2; /* Keeps it completely behind all elements */
-}
-
-/* MICROSOFT ONENOTE NAVIGATION BAR */
-.onenote-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 45px;
-    background-color: #7719aa; /* Iconic OneNote Purple */
+    /* Integrates the image, positions it to the right, and prevents repeating */
+    background: url('Cat 6.jpg') no-repeat right center;
+    background-size: contain;
     display: flex;
     align-items: center;
-    padding: 0 20px;
-    z-index: 100;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    padding: 0 10%;
 }
 
-.nav-logo {
-    font-weight: 600;
-    font-size: 1.1rem;
-    margin-right: 30px;
-    color: #ffffff;
+/* Content Layout (Left Side) */
+.content-area {
+    max-width: 500px;
+    z-index: 2;
 }
 
-.nav-tabs {
-    display: flex;
-    list-style: none;
-    height: 100%;
-    align-items: flex-end;
-}
-
-.nav-tabs li {
-    padding: 6px 16px;
+.tagline {
     font-size: 0.9rem;
-    color: #e2c6f3;
-    cursor: pointer;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-    transition: all 0.2s ease;
-}
-
-.nav-tabs li:hover {
-    background-color: #5c1384;
-    color: #ffffff;
-}
-
-.nav-tabs li.active {
-    background-color: #ffffff;
-    color: #7719aa;
-    font-weight: 600;
-}
-
-/* MAIN STRUCTURE CONTAINER */
-.main-container {
-    padding-top: 75px; /* Pushes content below fixed nav bar */
-    padding-left: 8%;  /* Spaces content perfectly away from the left wall */
-    display: flex;
-    flex-direction: column;
-    gap: 25px;         /* Spaces out Intro and Outro cards */
-    width: 100%;
-    max-width: 550px;  /* Keeps sections tight and perfectly clear of the cat */
-}
-
-/* GENERAL ONENOTE NOTEBOOK SECTIONS */
-.notebook-section {
-    background: rgba(20, 20, 20, 0.75); /* Dark translucent note appearance */
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-left: 4px solid #7719aa; /* OneNote purple indicator strip on the left */
-    padding: 30px;
-    border-radius: 0 12px 12px 0;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* INTRO SECTION SPECIFICS */
-.section-tag {
-    font-size: 0.8rem;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: #b666eb;
-    font-weight: 700;
-    margin-bottom: 5px;
+    letter-spacing: 2px;
+    color: #888;
+    display: inline-block;
+    margin-bottom: 1rem;
 }
 
-.intro-card h1 {
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: #ffffff;
+h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
 }
 
-.timestamp {
-    font-size: 0.8rem;
-    color: #888888;
-    margin-top: 4px;
+.highlight {
+    color: #ffbd59; /* A warm coffee/amber tone to pop against the dark */
 }
 
-.note-divider {
-    border: 0;
-    height: 1px;
-    background: rgba(255, 255, 255, 0.15);
-    margin: 15px 0 20px 0;
-}
-
-.body-text {
-    font-size: 1.05rem;
+p {
+    font-size: 1.1rem;
     line-height: 1.6;
-    color: #e5e7eb;
+    color: #ccc;
+    margin-bottom: 2.5rem;
 }
 
-.cta-btn {
-    margin-top: 25px;
-    background-color: #7719aa;
-    color: #ffffff;
-    border: none;
-    padding: 10px 24px;
-    font-size: 0.95rem;
+/* Interactive Buttons */
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.8rem 1.8rem;
     font-weight: 600;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.2s ease, transform 0.1s ease;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: all 0.3s ease;
 }
 
-.cta-btn:hover {
-    background-color: #9229cc;
+.btn-primary {
+    background-color: #ffffff;
+    color: #000000;
 }
 
-.cta-btn:active {
-    transform: scale(0.98);
+.btn-primary:hover {
+    background-color: #ffbd59;
+    transform: translateY(-2px);
 }
 
-/* OUTRO SECTION SPECIFICS */
-.outro-card h3 {
-    font-size: 1.2rem;
-    color: #b666eb;
-    margin-bottom: 10px;
+.btn-secondary {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #333;
 }
 
-/* RESPONSIVE DESIGN FOR SMARTPHONES */
-@media (max-width: 850px) {
-    .bg-image {
-        object-position: 70% center; /* Adjusts cat framing for smaller viewports */
+.btn-secondary:hover {
+    border-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Responsive design for smaller screens/phones */
+@media (max-width: 900px) {
+    .hero-container {
+        background-position: center bottom;
+        background-size: cover;
+        align-items: flex-start;
+        padding-top: 10%;
     }
     
-    .main-container {
-        padding-left: 20px;
-        padding-right: 20px;
-        max-width: 100%;
+    /* Adds a dark overlay so text remains readable on mobile when image scales */
+    .hero-container::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(0,0,0,0.8) 40%, rgba(0,0,0,0.2) 100%);
+        z-index: 1;
     }
-    
-    .notebook-section {
-        background: rgba(0, 0, 0, 0.85); /* Darkens panels on mobile for high readability */
+
+    h1 {
+        font-size: 2.5rem;
     }
 }
