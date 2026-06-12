@@ -3,15 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monday Mood</title>
+    <title>Notebook - Monday Mood</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="hero-container">
+    <!-- FULL SCREEN BACKGROUND IMAGE -->
+    <img src="Cat 6.jpg" alt="Grumpy Coffee Cat" class="bg-image">
+
+    <!-- MICROSOFT ONENOTE STYLE NAVIGATION BAR -->
+    <nav class="onenote-nav">
+        <div class="nav-logo">OneNote</div>
+        <ul class="nav-tabs">
+            <li class="active">Home</li>
+            <li>Insert</li>
+            <li>Draw</li>
+            <li>View</li>
+            <li>Help</li>
+        </ul>
+    </nav>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <div class="main-container">
         
-        <img src="Cat 6.jpg" alt="Grumpy Coffee Cat" class="bg-image">
-        
+        <!-- INTRO SECTION (Notebook Page Layout) -->
+        <section class="notebook-section intro-card">
+            <div class="section-tag">Quick Notes</div>
+            <h1>Current Status: Loading...</h1>
+            <p class="timestamp">Friday, June 12, 2026 • 2:50 PM</p>
+            <hr class="note-divider">
+            <p class="body-text">
+                Please do not speak to me until this cup is completely empty. 
+                Even then, proceed with caution. Vital functions are currently operating at 5% capacity.
+            </p>
+            <button class="cta-btn">Refill Coffee</button>
+        </section>
+
+        <!-- OUTRO SECTION -->
+        <section class="notebook-section outro-card">
+            <h3>Summary Logs</h3>
+            <p class="body-text">
+                Conclusion: Monday has won the battle, but the coffee will win the war. 
+                Shutting down communications until further notice.
+            </p>
+        </section>
+
     </div>
 
 </body>
