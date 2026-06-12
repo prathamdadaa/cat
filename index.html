@@ -3,83 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cat Background with Navigation</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background-color: #000000;
-            height: 100vh;
-            width: 100vw;
-            /* Sets Cat 6.jpg as the background image, aligned to the right side */
-            background-image: url('Cat 6.jpg');
-            background-repeat: no-repeat;
-            background-position: right center;
-            background-size: contain;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        /* Navigation Bar Styles */
-        header {
-            width: 100%;
-            padding: 20px 40px;
-            display: flex;
-            justify-content: flex-end; /* Pushes the navigation to the right side */
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 10;
-        }
-
-        nav ul {
-            display: flex;
-            gap: 30px; /* Space between links */
-            list-style: none;
-        }
-
-        nav a {
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 1rem;
-            font-weight: 500;
-            letter-spacing: 1px;
-            transition: color 0.3s ease;
-        }
-
-        /* Subtle hover effect */
-        nav a:hover {
-            color: #cccccc; 
-        }
-
-        /* Responsive tweak for vertical/mobile screens */
-        @media (max-width: 768px) {
-            body {
-                background-position: center center;
-                background-size: cover;
-            }
-
-            header {
-                justify-content: center; /* Centers navbar on small screens for better spacing */
-                padding: 20px;
-            }
-        }
-    </style>
+    <title>Home - Premium Cat Concept</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <div class="vignette-overlay"></div>
+
     <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#more">More</a></li>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html" target="_blank" rel="noopener noreferrer" class="nav-item active">Home</a></li>
+                <li><a href="about.html" target="_blank" rel="noopener noreferrer" class="nav-item">About</a></li>
+                <li><a href="more.html" target="_blank" rel="noopener noreferrer" class="nav-item">More</a></li>
             </ul>
         </nav>
     </header>
+
+    <main class="hero-content">
+        <h1>The Morning <br><span class="highlight">Ritual.</span></h1>
+        <p>A quiet place for those who require caffeine, silence, and absolute focus before facing the day.</p>
+        <a href="about.html" target="_blank" rel="noopener noreferrer" class="action-btn">Enter Space</a>
+    </main>
 
 </body>
 </html>
