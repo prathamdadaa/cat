@@ -1,4 +1,3 @@
-/* Reset default margins and padding */
 * {
     margin: 0;
     padding: 0;
@@ -12,24 +11,33 @@ body {
     overflow: hidden;
 }
 
-/* Fullscreen background setup */
+/* Container holds everything relative to the screen */
 .hero-container {
+    position: relative;
     height: 100vh;
     width: 100vw;
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Keeps content on the empty left side */
-    padding-left: 10%; /* Adjusts how far from the left edge the text sits */
-    
-    /* Background Image Properties */
-    background-image: url('Cat 6.jpg');
-    background-size: cover;
-    background-position: right center; /* Keeps the cat locked to the right side */
-    background-repeat: no-repeat;
+    justify-content: flex-start;
+    padding-left: 10%;
 }
 
-/* Glassmorphism content card for text readability */
+/* Styling the HTML img tag to act as a full-screen background */
+.bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Keeps image from stretching out of proportion */
+    object-position: right center; /* Keeps the cat locked on the right */
+    z-index: -1; /* Pushes the image BEHIND the text card */
+}
+
+/* Content card styling */
 .content-card {
+    position: relative;
+    z-index: 1; /* Ensures text stays in front */
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
@@ -42,7 +50,6 @@ body {
 
 .content-card h1 {
     font-size: 2.5rem;
-    font-weight: 700;
     margin-bottom: 20px;
     color: #f3f4f6;
 }
@@ -54,7 +61,6 @@ body {
     color: #d1d5db;
 }
 
-/* Call to Action Button */
 .cta-btn {
     background-color: #ffffff;
     color: #000000;
@@ -70,39 +76,19 @@ body {
 .cta-btn:hover {
     background-color: #e5e7eb;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
 }
 
-.cta-btn:active {
-    transform: translateY(0);
-}
-
-/* Responsive design for smaller screens */
 @media (max-width: 768px) {
     .hero-container {
         justify-content: center;
         padding-left: 0;
-        background-position: 65% center; /* Shifts image slightly to balance mobile views */
     }
-    
+    .bg-image {
+        object-position: 65% center;
+    }
     .content-card {
         margin: 20px;
         text-align: center;
-        background: rgba(0, 0, 0, 0.65); /* Darkens card for readability on small screens */
+        background: rgba(0, 0, 0, 0.65);
     }
-}
-
-.hero-container {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding-left: 10%;
-    
-    /* Updated path with no spaces */
-    background-image: url('cat6.jpg'); 
-    background-size: cover;
-    background-position: right center;
-    background-repeat: no-repeat;
 }
