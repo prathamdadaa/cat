@@ -3,23 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Don't Talk To Me Yet</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Cat Background</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000000;
+            height: 100vh;
+            width: 100vw;
+            /* Sets Cat 6.jpg as the background image, aligned to the right side */
+            background-image: url('Cat 6.jpg');
+            background-repeat: no-repeat;
+            background-position: right center;
+            background-size: contain;
+        }
+
+        /* Responsive tweak for vertical/mobile screens */
+        @media (max-width: 768px) {
+            body {
+                background-position: center center;
+                background-size: cover;
+            }
+        }
+    </style>
 </head>
 <body>
-
-    <main class="hero-container">
-        <div class="content-area">
-            <span class="tagline">Current Status: Loading...</span>
-            <h1>Procuring <br><span class="highlight">Caffeine.</span></h1>
-            <p>Please do not ask me any questions, initiate small talk, or make sudden movements until this mug is entirely empty. Thank you for your cooperation.</p>
-            
-            <div class="cta-buttons">
-                <a href="#" class="btn btn-primary">Buy Me a Coffee</a>
-                <a href="#" class="btn btn-secondary">Leave Me Alone</a>
-            </div>
-        </div>
-    </main>
-
 </body>
 </html>
