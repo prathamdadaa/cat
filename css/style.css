@@ -24,14 +24,14 @@ body {
 
 /* Styling the HTML img tag to act as a full-screen background */
 .bg-image {
-    position: absolute;
+    position: fixed; /* Fixed keeps it full-screen even if the page scrolls */
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Keeps image from stretching out of proportion */
-    object-position: right center; /* Keeps the cat locked on the right */
-    z-index: -1; /* Pushes the image BEHIND the text card */
+    width: 100vw;    /* 100% of the viewport width */
+    height: 100vh;   /* 100% of the viewport height */
+    object-fit: cover; /* Crops and scales perfectly without distorting the cat */
+    object-position: right center; /* Keeps the cat focused on the right side */
+    z-index: -1;     /* Keeps the image behind your text and buttons */
 }
 
 /* Content card styling */
