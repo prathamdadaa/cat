@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cat Background</title>
+    <title>Cat Background with Navigation</title>
     <style>
         * {
             margin: 0;
@@ -20,6 +20,39 @@
             background-repeat: no-repeat;
             background-position: right center;
             background-size: contain;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Navigation Bar Styles */
+        header {
+            width: 100%;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: flex-end; /* Pushes the navigation to the right side */
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px; /* Space between links */
+            list-style: none;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+
+        /* Subtle hover effect */
+        nav a:hover {
+            color: #cccccc; 
         }
 
         /* Responsive tweak for vertical/mobile screens */
@@ -28,9 +61,25 @@
                 background-position: center center;
                 background-size: cover;
             }
+
+            header {
+                justify-content: center; /* Centers navbar on small screens for better spacing */
+                padding: 20px;
+            }
         }
     </style>
 </head>
 <body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#more">More</a></li>
+            </ul>
+        </nav>
+    </header>
+
 </body>
 </html>
